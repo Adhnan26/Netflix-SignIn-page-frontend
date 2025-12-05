@@ -17,7 +17,7 @@ const Login = () => {
         e.preventDefault()
 
         try {
-            const response = await axios.post("http://localhost:3000/login", { "email": email, "password": pass })
+            const response = await axios.post("https://netflix-signin-page-clone.onrender.com/login", { "email": email, "password": pass })
 
             console.log(response)
 
