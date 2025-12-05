@@ -55,12 +55,12 @@ const Login = () => {
                     <h1 className='text-3xl font-bold mt-10'>Sign In</h1>
 
                     <form className='flex flex-col' onSubmit={check}>
-                        <input type="email" placeholder='Email' className='border border-gray-400 mt-6 p-3 outline-none bg-transparent text-white ' required
+                        <input type="email" placeholder='Email' className='border border-gray-400 mt-6 p-3 bg-transparent text-white ' required
                             value={email}
                             onChange={(e) => {
                                 setemail(e.target.value)
                             }} />
-                        <input type="password" placeholder='Password' className='border border-gray-400 mt-3 p-3 outline-none bg-transparent text-white' required
+                        <input type="password" placeholder='Password' className='border border-gray-400 mt-3 p-3 bg-transparent text-white' required
                             value={pass}
                             onChange={(e) => {
                                 setpass(e.target.value)
