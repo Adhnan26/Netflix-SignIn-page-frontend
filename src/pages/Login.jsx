@@ -75,7 +75,7 @@ const Login = () => {
 
                     <p className='text-center mt-2 text-gray-400 font-semibold'>OR</p>
 
-                    <button className='bg-gray-600 py-2 mt-2 rounded-sm font-semibold cursor-pointer'>Use a sign-in code</button>
+                    <button className='bg-gray-600 py-2 mt-2 rounded-sm font-semibold cursor-pointer hover:bg-gray-700'>Use a sign-in code</button>
 
                     <p className='text-center mt-3 underline cursor-pointer'>Forgot password?</p>
 
