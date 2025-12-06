@@ -1,16 +1,80 @@
-# React + Vite
+🎬 Week 11 Project Completed – Netflix Login Clone (React + Backend Integration) 🔐⚛️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Excited to share my Week-11 project, a Netflix-style Login Page built using React (Vite), Tailwind CSS, and connected to a custom backend API built with Express.js. 🎨📡
 
-Currently, two official plugins are available:
+This project helped me understand how the frontend communicates with a backend, how API requests work, and how authentication flows are structured in real applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Built as part of my learning journey at Error Makes Clever (EMC) using the EMC training flow, under the guidance of Agnel John (Founder & Instructor) and with support from Nandhini (Co-Mentor).
 
-## React Compiler
+✨ Project Highlights :
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ Netflix-style UI and design
+✅ Email & Password login authentication
+✅ Backend validation using Express server
+✅ Error handling for invalid credentials
+✅ Redirects user to Dashboard after successful login
+✅ Responsive UI with Tailwind CSS
+✅ Environment-based API configuration
+✅ Clean and structured components
 
-## Expanding the ESLint configuration
+🧠 What I Learned :
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+~ This project gave me hands-on experience with: 
+
+Connecting frontend with backend API
+
+Sending POST requests using Axios
+
+Handling responses and error messages
+
+Using React Router DOM for navigation
+
+Storing and resetting form input states
+
+Working with environment variables
+
+Understanding basic authentication workflow
+
+Deployment workflow using Vercel (Frontend) & Render (Backend)
+
+This was also my first backend-connected project, so it helped me understand how real-world login systems work behind the scenes.
+
+🧩 Tech Stack :
+
+⚛ React (Vite)
+🎨 Tailwind CSS
+📦 Axios
+🔗 React Router DOM
+🖥 Backend API (Node + Express, Render Deployment)
+
+📂 Pages Included :
+
+🔑 Login Page :
+~ User enters credentials
+~ Backend validates input
+~ Displays error if credentials mismatch
+
+🏠 Dashboard Page :
+~ Displayed only after successful login
+~ Basic protected route flow showcase
+
+⚙️ How It Works :
+
+~ The frontend sends a POST request to the backend endpoint with entered email & password
+~ If the response returns true, the user is navigated to the Dashboard
+~ If the response is false, an error message is shown
+~ Input fields reset after submission
+~ API URL is configurable via .env (optional)
+
+🔗 Live Project :
+➡ https://netflix-sign-in-page-frontend.vercel.app/
+
+🔗 Backend API :
+➡ https://netflix-signin-page-clone.onrender.com/login
+
+👨‍💻 Author :
+Mohamed Adhnan
+MERN Stack Developer – EMC Student
+
+Guided by Agnel John (Founder & Instructor, EMC)
+Supported by Nandhini (Co-Mentor)
