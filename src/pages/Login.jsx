@@ -14,28 +14,29 @@ const Login = () => {
 
 
     async function check(e) {
-    e.preventDefault()
+        e.preventDefault()
 
-    try {
-        const response = await axios.post("http://localhost:3000/login", { email, password: pass });
+        try {
+            const response = await axios.post("http://localhost:3000/login", { email, password: pass });
 
-        console.log("Response →", response.data);
+            console.log("Response →", response.data);
 
-        if (response.data.success === true) {
-            setError("");
-            navigate("/dashboard");
-        } else {
-            setError("Invalid email or password");
+            if (response.data.success) {
+                setError("");
+                navigate("/dashboard");
+            } else {
+                setError("Invalid email or password");
+            }
+
+
+            setemail("");
+            setpass("");
+
+        } catch (err) {
+            setError("⚠️ Something went wrong. Try again later.");
+            console.log(err);
         }
-
-        setemail("");
-        setpass("");
-
-    } catch (err) {
-        setError("⚠️ Something went wrong. Try again later.");
-        console.log(err);
     }
-}
 
 
 
@@ -88,7 +89,7 @@ const Login = () => {
                         <p
                             className='font-semibold cursor-pointer hover:underline'
                             onClick={() => navigate("/signup")}
->
+                        >
                             Sign up now
                         </p>
 
