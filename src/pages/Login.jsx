@@ -14,30 +14,29 @@ const Login = () => {
 
 
     async function check(e) {
-        e.preventDefault()
+    e.preventDefault()
 
-        try {
-            const response = await axios.post("https://netflix-signin-page-clone.onrender.com/login", { "email": email, "password": pass })
+    try {
+        const response = await axios.post("http://localhost:3000/login", { email, password: pass });
 
-            console.log(response)
+        console.log("Response →", response.data);
 
-            if (response.data === true) {
-                setError("")
-                navigate("/dashboard")
-            } else {
-                setError("Invalid email or password");
-            }
-
-            setemail("")
-            setpass("")
-
-        } catch (err) {
-            setError("⚠️ Something went wrong. Try again later.");
-            console.log(err);
+        if (response.data.success === true) {
+            setError("");
+            navigate("/dashboard");
+        } else {
+            setError("Invalid email or password");
         }
 
+        setemail("");
+        setpass("");
 
+    } catch (err) {
+        setError("⚠️ Something went wrong. Try again later.");
+        console.log(err);
     }
+}
+
 
 
 
@@ -86,7 +85,13 @@ const Login = () => {
 
                     <div className='flex gap-1 mt-2'>
                         <p className='text-gray-300'>New to Netflix?</p>
-                        <p className='font-semibold cursor-pointer hover:underline'>Sign up now</p>
+                        <p
+                            className='font-semibold cursor-pointer hover:underline'
+                            onClick={() => navigate("/signup")}
+>
+                            Sign up now
+                        </p>
+
                     </div>
 
                     <p className='text-gray-400 text-sm mt-3'>
