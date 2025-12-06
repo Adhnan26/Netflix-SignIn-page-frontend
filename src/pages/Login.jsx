@@ -17,13 +17,13 @@ const Login = () => {
         e.preventDefault()
 
         try {
-            const response = await axios.post("http://localhost:3000/login", { email, password: pass });
+            const response = await axios.post("http://localhost:3000/login", { "email": email, "password": pass })
 
-            console.log("Response →", response.data);
+            console.log(response)
 
-            if (response.data.success) {
-                setError("");
-                navigate("/dashboard");
+            if (response.data === true) {
+                setError("")
+                navigate("/dashboard")
             } else {
                 setError("Invalid email or password");
             }
@@ -86,13 +86,7 @@ const Login = () => {
 
                     <div className='flex gap-1 mt-2'>
                         <p className='text-gray-300'>New to Netflix?</p>
-                        <p
-                            className='font-semibold cursor-pointer hover:underline'
-                            onClick={() => navigate("/signup")}
-                        >
-                            Sign up now
-                        </p>
-
+                        <p className='font-semibold cursor-pointer hover:underline'>Sign up now</p>
                     </div>
 
                     <p className='text-gray-400 text-sm mt-3'>
