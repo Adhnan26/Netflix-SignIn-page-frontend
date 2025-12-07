@@ -48,7 +48,7 @@ const Login = () => {
     return (
         <div className='min-h-screen flex flex-col items-center justify-center relative overflow-hidden'>
             
-            <img className="hidden sm:block absolute top-2 left-2 w-[35%] md:w-3xs z-10" src={NetflixLogo} alt="" />
+            <img className="hidden sm:block absolute top-2 left-2 w-[35%] md:w-3xs z-10" src={NetflixLogo} alt="netflix logo" />
 
             <img src={image} alt="background image" className='absolute top-0 left-0 w-full h-full object-cover' />
 
@@ -100,9 +100,7 @@ const Login = () => {
 
                     <p className='text-blue-500 text-sm mt-2 underline cursor-pointer'>Learn more</p>
                 </div>
-                <h1 className='md:hidden text-4xl absolute top-3 left-9 z-10 text-red-600 font-semibold shadow-lg drop-shadow-[0_0_15px_rgba(220,38,38,0.6)]'>
-                    NETFLIX
-                </h1>
+                <img className="block sm:hidden absolute top-2 left-2 w-[35%] z-10" src={NetflixLogo} alt="netflix logo" />
 
             </div>
         </div>
