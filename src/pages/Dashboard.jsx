@@ -1,12 +1,11 @@
 import React from 'react'
 import image from '../assets/bg-image.jpg'
+import NetflixLogo from '../assets/Logonetflix.png'
 
 const Dashboard = () => {
     return (
         <div className='min-h-screen flex flex-col items-center justify-center relative overflow-hidden'>
-            <h1 className='hidden sm:block text-4xl absolute top-5 left-5 z-10 text-red-600 font-bold shadow-lg drop-shadow-[0_0_15px_rgba(220,38,38,0.6)]'>
-                NETFLIX
-            </h1>
+            <img className="absolute top-2 left-2 w-[35%] md:w-3xs z-10" src={NetflixLogo} alt="" />
 
             <img src={image} alt="background image" className='absolute top-0 left-0 w-full h-full object-cover' />
 
